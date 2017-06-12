@@ -34,7 +34,7 @@ public class ControlPanelView extends JFrame implements Observer, ActionListener
         buttons = new ArrayList<Button>();
         setTitle("ControlPanel");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(500, 300, 400, 300);
+        setBounds(500, 100, 500, 300);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);

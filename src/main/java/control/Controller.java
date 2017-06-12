@@ -25,11 +25,11 @@ public class Controller {
         this.controlPanel.setControl(this);
         this.elevator.addObserver(elovatorView);
         this.elevator.addObserver(controlPanel);
-        this.elevator.addLevel(4);
+        this.elevator.addLevel(8);
         this.elevator.setCurrentLevel(0);
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -70,7 +70,7 @@ public class Controller {
                     }
                     elevator.setCurrentLevel(currentLevel);
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                     } catch (InterruptedException e) {
                         return;
                     }
@@ -86,13 +86,13 @@ public class Controller {
         elevator.setDoorOpen(true);
         elevator.removePushedLevel(currentLevel);
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             return;
         }
         elevator.setDoorOpen(false);
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             return;
         }

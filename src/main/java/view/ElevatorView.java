@@ -4,10 +4,6 @@ package src.main.java.view;
  * Created by Alicja on 2017-06-12.
  */
         import src.main.java.model.Elevator;
-
-        import java.awt.BorderLayout;
-        import java.awt.EventQueue;
-
         import javax.swing.JFrame;
         import javax.swing.JPanel;
         import javax.swing.border.EmptyBorder;
@@ -30,7 +26,7 @@ public class ElevatorView extends JFrame implements Observer {
         levelViews = new ArrayList<>();
         activeLevel = -1;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 400, 300);
+        setBounds(10, 10, 800, 100);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);

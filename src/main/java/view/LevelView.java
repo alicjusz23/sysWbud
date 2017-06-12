@@ -18,15 +18,15 @@ public class LevelView extends JPanel {
     public LevelView(int level) {
         setLayout(new GridLayout(1, 0, 0, 0));
 
-        JLabel levelLbl = new JLabel("Ebene " + level);
+        JLabel levelLbl = new JLabel("Piętro " + level);
         add(levelLbl);
 
         panel = new JPanel();
-        panel.setSize(100, 100);
+        panel.setSize(20, 20);
         panel.setBackground(Color.WHITE);
         panel.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLACK));
         add(panel);
-        setSize(200, 100);
+        setSize(50, 20);
 
     }
 
