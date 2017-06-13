@@ -25,7 +25,7 @@ public class Controller {
         this.controlPanel.setControl(this);
         this.elevator.addObserver(elovatorView);
         this.elevator.addObserver(controlPanel);
-        this.elevator.addLevel(6);
+        this.elevator.addLevel(8);
         this.elevator.setCurrentLevel(0);
 
         try {
