@@ -26,7 +26,7 @@ public class ElevatorView extends JFrame implements Observer {
         levelViews = new ArrayList<>();
         activeLevel = -1;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(10, 10, 800, 100);
+        setBounds(10, 10, 400, 300);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);

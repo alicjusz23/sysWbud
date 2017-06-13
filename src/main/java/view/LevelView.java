@@ -5,10 +5,10 @@ package src.main.java.view;
  */
         import java.awt.Color;
         import java.awt.GridLayout;
+        import java.awt.event.ActionEvent;
+        import java.awt.event.ActionListener;
 
-        import javax.swing.BorderFactory;
-        import javax.swing.JLabel;
-        import javax.swing.JPanel;
+        import javax.swing.*;
 
 
 public class LevelView extends JPanel {
@@ -22,11 +22,15 @@ public class LevelView extends JPanel {
         add(levelLbl);
 
         panel = new JPanel();
-        panel.setSize(20, 20);
+        panel.setSize(100, 100);
         panel.setBackground(Color.WHITE);
         panel.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLACK));
+
+        ClockLabel clock = new ClockLabel();
+
+        panel.add(clock);
         add(panel);
-        setSize(50, 20);
+        setSize(200, 100);
 
     }
 
@@ -39,4 +43,22 @@ public class LevelView extends JPanel {
     }
 
 
+}
+
+class ClockLabel extends JLabel implements ActionListener {
+    long start = System.currentTimeMillis();
+    long stop;
+
+    public ClockLabel() {
+        Timer t = new Timer(1000, this);
+        t.start();
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        setText(String.valueOf(start-stop));
+    }
+
+    public void setDoorOpen(){
+        stop = System.currentTimeMillis();
+    }
 }

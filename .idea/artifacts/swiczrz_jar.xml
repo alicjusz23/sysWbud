@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="swiczrz:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/swiczrz_jar</output-path>
+    <root id="archive" name="swiczrz.jar">
+      <element id="module-output" name="swiczrz" />
+    </root>
+  </artifact>
+</component>
