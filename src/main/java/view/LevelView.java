@@ -14,6 +14,7 @@ package src.main.java.view;
 public class LevelView extends JPanel {
 
     private JPanel panel;
+    //ClockLabel clock;
 
     public LevelView(int level) {
         setLayout(new GridLayout(1, 0, 0, 0));
@@ -26,9 +27,9 @@ public class LevelView extends JPanel {
         panel.setBackground(Color.WHITE);
         panel.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLACK));
 
-        ClockLabel clock = new ClockLabel();
+       // clock = new ClockLabel();
 
-        panel.add(clock);
+       // panel.add(clock);
         add(panel);
         setSize(200, 100);
 
@@ -36,18 +37,23 @@ public class LevelView extends JPanel {
 
     public void setDoorOpen(){
         panel.setBackground(Color.GREEN);
+       // clock.stop();
     }
 
     public void setOnLevel(boolean onLevel){
         panel.setBackground(onLevel ? Color.ORANGE :Color.WHITE);
     }
 
+    /*public void startClock(){
+        clock.start();
+    }*/
+
 
 }
 
-class ClockLabel extends JLabel implements ActionListener {
+/*class ClockLabel extends JLabel implements ActionListener {
     long start = System.currentTimeMillis();
-    long stop;
+    long stop = System.currentTimeMillis();
 
     public ClockLabel() {
         Timer t = new Timer(1000, this);
@@ -55,10 +61,15 @@ class ClockLabel extends JLabel implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        setText(String.valueOf(start-stop));
+        setText(String.valueOf(stop-start));
     }
 
-    public void setDoorOpen(){
+    public void stop(){
         stop = System.currentTimeMillis();
     }
+
+    public void start(){
+        start = System.currentTimeMillis();
+    }
 }
+*/
